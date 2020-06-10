@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>PATIENT REGISTERATION</title>
+</head>
+<body>
+    
+<form method="POST" action="{%url 'first_app:app'%}">
+{% csrf_token %}
+<table border="2" align="center" height="100%" width="70%" bgcolor="#C8C8C8" >
+<caption><font size=5><b>Patient Registration Form</b></font></caption>
+<tr>
+<th>Enter your first name</th>
+<td><input type="text" name="first_name" id="fn1" maxlength="10" title="enter your first name" placeholder="enter your first name" required/></td>
+</tr>
+<tr>
+<th>Enter your second name</th>
+<td><input type="text" name="second_name" id="fn1" maxlength="10" title="enter your second name" placeholder="enter your second name" required/></td>
+</tr>
+<tr>
+<th>Enter your Father/ Husband name</th>
+<td><input type="text"name="father_name" id="fn1" maxlength="10" title="enter your father/husband name" placeholder="enter your father/husband name" required/></td>
+</tr>
+<tr>
+<th>Enter your password</th>
+<td><input type="password" name="pass"/></td>
+</tr>
+
+<tr>
+<th>Enter your email</th>
+<td><input type="email"/></td>
+</tr>
+<tr>
+<th>Enter your mobile</th>
+<td><input type="number" name="user"/></td>
+</tr>
+<tr>
+<th>Enter your address</th>
+<td><textarea rows="8" cols="20" name="address"></textarea></td>
+</tr>
+<tr>
+<th>Select your gender</th>
+<td>
+male<input type="radio" name="g" value="m"/>
+female<input type="radio" name="g" value="f"/>
+</td>
+</tr>
+<tr>
+<th>Urgent Things Required</th>
+<td>
+Dairy Products<input type="checkbox" name="x[]" value="h"/>
+Mineral Water<input type="checkbox" name="x[]" value="h2"/>
+Medicines<input type="checkbox" name="x[]" value="h3"/>
+</td>
+</tr>
+<tr>
+<th>Select your DOB</th>
+<td><input type="date"/></td>
+</tr>
+<tr>
+<th>Select your Country</th>
+<td>
+<select name="country">
+<option value="" selected="selected" disabled="disabled">Select your country</option>
+<option value="1">India</option>
+<option value="2">Other country</option>
+</select>
+</td>
+</tr>
+<tr>
+<th>Upload your docs(ADHAAR CARD,BPL CARD,ETC)</th>
+<td><input type="file"/></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="Submit" value="Submit" name="save">
+<input type="reset" value="Reset Data"/>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

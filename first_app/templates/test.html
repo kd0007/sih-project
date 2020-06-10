@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {%for z in a%}
+    {{z.username}}
+    {{z.password}}
+    {%endfor%}
+    <form action="{%url 'first_app:app'%}" method="POST">
+        {%csrf_token%}
+    <input type="text" placeholder="enter username" name="user">
+    <input type="text" placeholder="enter password" name="pass">
+    <input type="submit" value="Submit" name="save">
+</form>
+</body>
+</html>
